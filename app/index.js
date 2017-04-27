@@ -1,12 +1,16 @@
-import _ from 'lodash';
+// import 'jquery';
+// import 'angular';
+// import 'bootstrap/dist/js/bootstrap';
+// import 'bootstrap/dist/css/bootstrap';
 
-function component () {
-  var element = document.createElement('h1');
+// document.write('from js');
 
-  /* lodash is required for the next line to work */
-  element.innerHTML = _.join(['Hello','webpack'], ' ');
+var app = angular.module("myApp", []); 
 
-  return element; 
-}
+app.controller("appCtrl", $scope => {
+    $scope.title = 'Danger!';
 
-document.body.appendChild(component());
+    $scope.clickme = function() {
+        console.log('aaa hi clicked me !!!!');
+    }
+});
